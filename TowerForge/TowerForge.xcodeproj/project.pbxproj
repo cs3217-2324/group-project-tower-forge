@@ -63,6 +63,7 @@
 		52DF5FF92BA35D2B00135367 /* MovableComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF5FF82BA35D2B00135367 /* MovableComponent.swift */; };
 		52DF5FFB2BA3601400135367 /* HealthComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF5FFA2BA3601400135367 /* HealthComponent.swift */; };
 		52DF5FFF2BA3656500135367 /* ShootingComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF5FFE2BA3656500135367 /* ShootingComponent.swift */; };
+		9B8696512BAD5AEB0002377C /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8696502BAD5AEB0002377C /* Grid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +143,7 @@
 		52DF5FF82BA35D2B00135367 /* MovableComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovableComponent.swift; sourceTree = "<group>"; };
 		52DF5FFA2BA3601400135367 /* HealthComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthComponent.swift; sourceTree = "<group>"; };
 		52DF5FFE2BA3656500135367 /* ShootingComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShootingComponent.swift; sourceTree = "<group>"; };
+		9B8696502BAD5AEB0002377C /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		BABB7C052BA9A41000D54DAE /* TowerForceTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TowerForceTestPlan.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -340,6 +342,7 @@
 				3C9955B82BA5620A00D33FA5 /* Events */,
 				3C99559F2BA47D3E00D33FA5 /* Entities */,
 				52DF5FF02BA3519D00135367 /* Components */,
+				9B8696502BAD5AEB0002377C /* Grid.swift */,
 				52DF5FDD2BA32D7E00135367 /* EntityManager.swift */,
 				52DF5FEC2BA34D0300135367 /* TFComponent.swift */,
 				3C9955AC2BA483B100D33FA5 /* TFSystem.swift */,
@@ -554,6 +557,7 @@
 				52DF5FAE2BA32B2300135367 /* GameScene.swift in Sources */,
 				52578B822BA61AAF00B4D76C /* PositionComponent.swift in Sources */,
 				3C9955A32BA47DBB00D33FA5 /* BaseUnit.swift in Sources */,
+				9B8696512BAD5AEB0002377C /* Grid.swift in Sources */,
 				3C9955BA2BA5637200D33FA5 /* DamageEvent.swift in Sources */,
 				3C9955CA2BA5888F00D33FA5 /* SpawnEvent.swift in Sources */,
 				5295A2132BAAEA16005018A8 /* UnitNode.swift in Sources */,

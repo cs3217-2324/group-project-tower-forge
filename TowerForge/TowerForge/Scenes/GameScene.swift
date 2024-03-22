@@ -8,12 +8,15 @@
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene, UnitSelectionNodeDelegate {
+class GameScene: SKScene {
+    let DEFAULT_NO_OF_ROWS = 8
+
     var sceneManagerDelegate: SceneManagerDelegate?
 
     private var lastUpdatedTimeInterval = TimeInterval(0)
     private var entityManager: EntityManager?
     private var selectionNode: UnitSelectionNode?
+    private var grid: Grid?
 
     override func didMove(to view: SKView) {
         entityManager = EntityManager()
@@ -24,7 +27,8 @@ class GameScene: SKScene, UnitSelectionNodeDelegate {
         guard var selectionNode = selectionNode else {
             return
         }
-        selectionNode.delegate = self
+        grid = Grid(gameScene: self, entityManager: entityManager, noOfRows: DEFAULT_NO_OF_ROWS)
+        selectionNode.delegate = grid
         addChild(selectionNode)
 
         // Position unit selection node on the left side of the screen
@@ -59,11 +63,5 @@ class GameScene: SKScene, UnitSelectionNodeDelegate {
         let changeInTime = currentTime - lastUpdatedTimeInterval
         lastUpdatedTimeInterval = currentTime
         entityManager.update(changeInTime)
-    }
-    func unitSelectionNodeDidSpawn(unitType: UnitType, position: CGPoint) {
-        guard var entityManager = entityManager else {
-            return
-        }
-        UnitGenerator.spawnUnit(ofType: unitType, at: position, player: Player.ownPlayer, entityManager: entityManager, scene: self)
     }
 }
