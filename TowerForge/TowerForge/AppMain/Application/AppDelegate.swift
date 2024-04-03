@@ -6,16 +6,18 @@
 //
 
 import UIKit
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        true
+        StorageManager.initializeData()
+        FirebaseApp.configure()
+        return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -24,6 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks.
         // Games should use this method to pause the game.
+
+        /// TODO: ADD PAUSE METHOD HERE
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
