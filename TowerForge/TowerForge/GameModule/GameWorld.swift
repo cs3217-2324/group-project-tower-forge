@@ -90,6 +90,14 @@ class GameWorld {
             gameEngine.addEntity(node)
         }
     }
+
+    func presentStatePopup() {
+        let popup = StatePopupNode()
+        popup.delegate = self
+        // TODO: Refactor this
+        popup.zPosition = 10_000
+        scene?.add(node: popup, staticOnScreen: true)
+    }
 }
 
 extension GameWorld: Renderable {
@@ -103,4 +111,16 @@ extension GameWorld: UnitSelectionNodeDelegate {
         gameEngine.addEvent(RequestSpawnEvent(ofType: type, timestamp: CACurrentMediaTime(),
                                               position: position, player: .ownPlayer))
     }
+}
+
+// TODO: Fill the function
+extension GameWorld: StatePopupDelegate {
+    func onMenu() {
+        //
+    }
+
+    func onResume() {
+        //
+    }
+
 }
